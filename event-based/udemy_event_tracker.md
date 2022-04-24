@@ -4,7 +4,7 @@
 
 ## High level design
 
-    ![plot](./event-based/udemy_event_tracker_design.png)
+    ![plot](udemy_event_tracker_design.png)
 
 ## Key decisions and components used
 
