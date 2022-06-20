@@ -1,6 +1,27 @@
 ## Useful links and key notes
 
-### Youtube video Martin Fowler – Microservices
+## Basics of request-response pattern and Event based
+
+    https://www.kai-waehner.de/blog/2020/05/25/api-management-gateway-apache-kafka-comparison-mulesoft-kong-apigee/
+
+### Request-response pattern
+
+    - Provides point to point messaging
+    - Suitable for synchronous integration use cases
+    - Not suitable when request continuously flows in (like a stream). 
+        REST / SOAP web services do not provide characteristics to build a scalable, reliable real time infrastructure for a high throughput of events.
+    - Technologies: HTTP, REST/SOAP, gRPC
+
+### Event based pattern
+
+    - Provides Messaging / Pub Sub (sending data from A to B and C)
+    - Suitable when request continuously flows in (continuous data processing)
+    - Often asynchronous 
+    - Event-driven, supporting patterns like Event Sourcing and CQRS (command Query request segregation)
+    - Technologies: Kafka, MQ, PubSub
+
+
+## Youtube video Martin Fowler – Microservices
     https://www.youtube.com/watch?v=2yko4TbC8cI
 
     - Microservices thinks interms of breaking Application into components. 
