@@ -2,23 +2,34 @@
 
 ## Basics of request-response pattern and Event based
 
-    https://www.kai-waehner.de/blog/2020/05/25/api-management-gateway-apache-kafka-comparison-mulesoft-kong-apigee/
 
 ### Request-response pattern
 
-    - Provides point to point messaging
+    - Point to point messaging
     - Suitable for synchronous integration use cases
     - Not suitable when request continuously flows in (like a stream). 
         REST / SOAP web services do not provide characteristics to build a scalable, reliable real time infrastructure for a high throughput of events.
     - Technologies: HTTP, REST/SOAP, gRPC
 
+    ** API technologies that use asynchronous communication: WebSocket, MQTT, Server-side Events (SSE), Kafka Protocol
+
 ### Event based pattern
 
-    - Provides Messaging / Pub Sub (sending data from A to B and C)
+    - Messaging / Pub Sub (sending data from A to B , C)
     - Suitable when request continuously flows in (continuous data processing)
     - Often asynchronous 
     - Event-driven, supporting patterns like Event Sourcing and CQRS (command Query request segregation)
     - Technologies: Kafka, MQ, PubSub
+
+    ** Some vendors provides Messaging (ESB), Storage, Processing capabilities.
+
+### Interesting articles
+
+    Relationship between API and event streaming ? 
+        https://www.kai-waehner.de/blog/2020/05/25/api-management-gateway-apache-kafka-comparison-mulesoft-kong-apigee/
+
+    Why synchronous and asynchronous communication together ?
+        https://www.enterpriseintegrationpatterns.com/ramblings/18_starbucks.html
 
 
 ## Youtube video Martin Fowler – Microservices
