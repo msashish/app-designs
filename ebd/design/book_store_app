@@ -1,0 +1,17 @@
+ABC presents a challenge to develop a simple “Book Store” backend app with the spec below.
+
+End point	                    HTTP Method	    Description
+/app-url/v1/books/	            GET	            List down the books in the datastore
+/app-url/v1/books/{book-id}	    GET	            Returns the book details
+/app-url/v1/books	            POST	        Insert a new book using the json data in the http body. The schema of the JSON as explained above.
+/app-url/v1/books/{book-id}	    PUT	            Update partial/complete book details.
+/app-url/v1/books?name=”abc*”	GET	            Partial Search: Returns all books with matching name URL parameter value.
+
+Discuss the following:
+    - Language and framework used to build the application
+    - Choice of database to store the book details
+    - Runtime environment for the app
+    - CICD tooling
+    - Testing approach
+    - Infrastructure management
+    - Security and IAM
