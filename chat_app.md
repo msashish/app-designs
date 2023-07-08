@@ -1,4 +1,4 @@
-# A Chat Application design
+# Chat Application design
 
 ## High level design of whatsapp
 
@@ -34,3 +34,38 @@
 
     6) To handle message routing, deliverability, and general instant messaging aspects of the app, Whatsapp uses Ejabberd.
     Ejabberd is an open-source XMPP server that is written in Erlang. WhatsApp uses a modified version of XMPP as its protocol for handling message delivery.
+
+
+## System design of Chat App
+
+    https://bytebytego.com/courses/system-design-interview/design-a-chat-system
+
+
+### Possible Approaches for server-initiated connection
+
+    Since HTTP is client-initiated and stateless (plus not bi-directional), it is not trivial to send messages from the server. Techniques are used to simulate a server-initiated connection: 
+    
+    1) Polling
+        Client periodically asks the server if there are messages available
+    
+    2) Long polling
+        Client holds the connection open until there are actually new messages available or a timeout threshold has been reached. Once the client receives new messages, it immediately sends another request to the server, restarting the process.
+    
+   3)  WebSocket
+        WebSocket connection is initiated by the client. It is bi-directional and persistent. It starts its life as a HTTP connection and could be “upgraded” via some well-defined handshake to a WebSocket connection.
+
+
+
+### Detailed design
+
+    - We shall use WebSocket for both client-initiated and server-initiated connections
+    - Storage: There are two categories of data
+        Relational data: User profile, group, settings, friend list. Use Relational DB.
+        Chat history: Textual. Use Key Value stores.
+            
+
+
+### Learnings
+
+    - HTTP keep-alive header allows a client to maintain a persistent connection. Reduces number of TCP handshakes.
+    - 

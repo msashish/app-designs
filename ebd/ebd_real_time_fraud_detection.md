@@ -18,7 +18,7 @@
 
 ## Considerations and discussions
 
-    1) Client side component (not much focus on this tech stack)
+    1) Client side component 
     2) Hadoop component to use for real-time activities
     3) Hadoop component to use near-real-time processing
     4) Hadoop component to use for exploratory activities
@@ -26,6 +26,7 @@
     6) Any caching (local, remote) component that will be needed ?
     7) Where will fraud rules reside ?
 
-## Solutions
+## Design Overview
+    <img src="..click-stream-design.png">]
 
  
